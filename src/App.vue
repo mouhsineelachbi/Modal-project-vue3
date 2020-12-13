@@ -2,7 +2,11 @@
   <h1>My first Vue app</h1>
   <p>Welcome ...</p>
   <div v-if="showModal">
-    <Modal :header="header" :text="text" theme="sale" @close="toggleModal"/> <!-- close is the name of emitted event from Modal component !-->
+    <Modal theme="sale" @close="toggleModal"> <!-- close is the name of emitted event from Modal component !-->
+      <!-- Using Slots to pass content (template in this case) to component -->
+        <h1>Mythose GiveAway</h1>
+        <p>Grap your Mytose swag for half price!</p>
+    </Modal>
   </div>
   <button @click.shift="toggleModal">Open Modal (shift)</button><br><br>
   <button @click.right="toggleModal">Open Modal (right click)</button><br><br>

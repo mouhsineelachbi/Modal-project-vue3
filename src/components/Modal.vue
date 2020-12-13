@@ -1,17 +1,14 @@
 <template>
     <div class="backdrop" @click.self="closeModal"> <!-- self is an event modifier to react only for this not Its children !-->
         <div class="modal" :class="{ sale: theme === 'sale'}">
-            <!--<h1>Modal Title</h1>-->
-            <h1>{{ header }}</h1>
-            <p>{{ text }}</p>
-            <p>modal content</p>
+            <slot></slot>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['header', 'text', 'theme'],
+    props: ['theme'],
     methods: {
         closeModal () {
             this.$emit('close')
