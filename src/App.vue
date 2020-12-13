@@ -1,6 +1,6 @@
 <template>
   <h1>My first Vue app</h1>
-  <Modal />
+  <Modal :header="header" :text="text" />
 </template>
 
 <script>
@@ -10,6 +10,13 @@ export default {
   name: "App",
   components: {
     Modal
+  },
+  data() {
+    return {
+      title: '',
+      header: 'Signup for the GiveAway!',
+      text: 'Grab your modal for half price!'
+    }
   }
 };
 </script>
