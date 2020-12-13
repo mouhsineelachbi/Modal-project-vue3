@@ -4,10 +4,20 @@
   <div v-if="showModal">
     <Modal theme="sale" @close="toggleModal"> <!-- close is the name of emitted event from Modal component !-->
       <!-- Using Slots to pass content (template in this case) to component -->
+
+      <!-- named slot -->
+      <template v-slot:links> <!-- links is the name of the slot -->
+        <a href="">Signup now</a>
+        <a href="">More info</a>
+      </template>
+
+      <!-- unnamed slot -->
         <h1>Mythose GiveAway</h1>
         <p>Grap your Mytose swag for half price!</p>
     </Modal>
   </div>
+
+
   <button @click.shift="toggleModal">Open Modal (shift)</button><br><br>
   <button @click.right="toggleModal">Open Modal (right click)</button><br><br>
   <button @click.alt="toggleModal">Open Modal (alt)</button>

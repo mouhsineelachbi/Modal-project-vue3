@@ -2,6 +2,9 @@
     <div class="backdrop" @click.self="closeModal"> <!-- self is an event modifier to react only for this not Its children !-->
         <div class="modal" :class="{ sale: theme === 'sale'}">
             <slot></slot>
+            <div class="actions">
+                <slot name="links"></slot> <!-- links is the name of the named slot -->
+            </div>
         </div>
     </div>
 </template>
