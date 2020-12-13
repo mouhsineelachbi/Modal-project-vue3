@@ -4,7 +4,9 @@
   <div v-if="showModal">
     <Modal :header="header" :text="text" theme="sale" @close="toggleModal"/> <!-- close is the name of emitted event from Modal component !-->
   </div>
-  <button @click="toggleModal">Open Modal</button>
+  <button @click.shift="toggleModal">Open Modal (shift)</button><br><br>
+  <button @click.right="toggleModal">Open Modal (right click)</button><br><br>
+  <button @click.alt="toggleModal">Open Modal (alt)</button>
 </template>
 
 <script>

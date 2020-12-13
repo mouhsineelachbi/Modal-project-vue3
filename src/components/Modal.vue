@@ -1,5 +1,5 @@
 <template>
-    <div class="backdrop" @click="closeModal">
+    <div class="backdrop" @click.self="closeModal"> <!-- self is an event modifier to react only for this not Its children !-->
         <div class="modal" :class="{ sale: theme === 'sale'}">
             <!--<h1>Modal Title</h1>-->
             <h1>{{ header }}</h1>
