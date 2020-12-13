@@ -7,8 +7,8 @@
 
       <!-- named slot -->
       <template v-slot:links> <!-- links is the name of the slot -->
-        <a href="">Signup now</a>
-        <a href="">More info</a>
+        <a href="#">Signup now</a>
+        <a href="#">More info</a>
       </template>
 
       <!-- unnamed slot -->
@@ -18,9 +18,7 @@
   </div>
 
 
-  <button @click.shift="toggleModal">Open Modal (shift)</button><br><br>
-  <button @click.right="toggleModal">Open Modal (right click)</button><br><br>
-  <button @click.alt="toggleModal">Open Modal (alt)</button>
+  <button @click="toggleModal">Open Modal</button>
 </template>
 
 <script>
