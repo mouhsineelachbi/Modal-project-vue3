@@ -1,6 +1,6 @@
 <template>
   <h1>My first Vue app</h1>
-  <Modal :header="header" :text="text" />
+  <Modal :header="header" :text="text" theme="sale"/>
 </template>
 
 <script>
