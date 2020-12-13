@@ -32,14 +32,16 @@ export default {
   data() {
     return {
       title: '',
-      header: 'Signup for the GiveAway!',
-      text: 'Grab your modal for half price!',
-      showModal: false
+      showModal: false,
+      showModalTwo: false,
     }
   },
   methods: {
     toggleModal () {
       this.showModal = !this.showModal;
+    },
+    toggleModalTwo () {
+      this.showModalTwo = !this.showModalTwo;
     }
   }
 };
